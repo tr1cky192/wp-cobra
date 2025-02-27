@@ -20,3 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+jQuery(function($) {
+    if ($('body').hasClass('page-id-95')) { 
+        $(document.body).on('updated_wc_div', function() {
+            $(document.body).trigger('wc_update_cart');
+        });
+
+        $(document.body).trigger('wc_update_cart'); 
+    }
+});
